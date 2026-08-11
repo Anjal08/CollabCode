@@ -10,19 +10,19 @@
 
 ### Landing Page
 
-![CollabCode Landing Page](./screenshots/landing-page.png)
+![CollabCode Landing Page](./Screenshots/landing-page.png)
 
 ### Collaborative IDE
 
-![CollabCode IDE](./screenshots/ai-code-editor.png)
+![CollabCode IDE](./Screenshots/ai-code-editor.png)
 
 ### Real-Time Collaboration
 
-![CollabCode Collaboration](./screenshots/collaboration.png)
+![CollabCode Collaboration](./Screenshots/collaboration.png)
 
 ### Project Dashboard
 
-![CollabCode Dashboard](./screenshots/dashboard.png)
+![CollabCode Dashboard](./Screenshots/dashboard.png)
 
 # 💡 What I Built
 
