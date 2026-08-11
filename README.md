@@ -1,26 +1,106 @@
 # CollabCode 🚀
+> AI-powered collaborative browser-based IDE with real-time collaboration,
+> an autonomous AI pair programmer, and in-browser code execution.
 
-A highly advanced, browser-based collaborative Integrated Development Environment (IDE) that seamlessly combines real-time team collaboration with an autonomous AI pair programmer and an in-browser operating system.
+[🌐 Live Demo](https://collab-code-jdojvutft-anjal08s-projects.vercel.app/) •
+[💻 GitHub](https://github.com/Anjal08/CollabCode)
 
-![CollabCode Preview](https://via.placeholder.com/1000x500.png?text=CollabCode+Workspace)
+---
+## 📸 Project Preview
 
-CollabCode allows development teams to chat, write code, interact with a fully-contextual AI assistant, and execute backend servers directly within their browser without requiring any cloud VMs.
+### Landing Page
+
+![CollabCode Landing Page](./screenshots/landing-page.png)
+
+### Collaborative IDE
+
+![CollabCode IDE](./screenshots/ai-code-editor.png)
+
+### Real-Time Collaboration
+
+![CollabCode Collaboration](./screenshots/collaboration.png)
+
+### Project Dashboard
+
+![CollabCode Dashboard](./screenshots/dashboard.png)
+
+# 💡 What I Built
+
+CollabCode was designed to bring the core tools developers use during
+collaborative development into one browser-based environment.
+
+The project combines real-time communication, AI-assisted development,
+browser-based code execution, terminal access, and workspace management
+into a single platform.
+
+
+## 💡 Why CollabCode?
+
+CollabCode brings collaborative development, AI-assisted coding,
+and browser-based execution into a single development environment.
+
+Instead of switching between an IDE, terminal, AI assistant, and
+collaboration tools, developers can work within one browser-based workspace.
 
 ## ✨ Core Features
 
-- **Real-Time Collaboration**: Built with Socket.io, multiple users can join a project workspace, chat in real-time, and coordinate development efforts effortlessly.
-- **Agentic AI Pair Programmer**: Integrated with Groq's high-speed Llama 3 model. The AI is fully aware of your entire project file tree. Simply mention `@ai` in the chat, and the AI can generate, update, and manage code files directly in your workspace.
-- **In-Browser OS (WebContainers)**: Run a native Node.js runtime entirely in the browser! No server provisioning required. Start an Express server or build a React app right from the client.
-- **Interactive Terminal (Xterm.js)**: A fully functional bash terminal integrated directly into the UI. Run commands like `npm install`, start scripts, and view live process logs.
-- **Dynamic IDE Interface**: Powered by `react-resizable-panels`, the workspace includes a file explorer, syntax-highlighted code editor, terminal, chat panel, and a live web preview iframe.
-- **Secure Authentication & Management**: Complete JWT-based authentication system for managing users, project workspaces, and role-based access control for collaborators.
+- 👥 **Real-Time Collaboration**
+  Multiple developers can work in the same workspace using Socket.io.
 
+- 🤖 **AI Pair Programmer**
+  Groq/Llama 3 understands project context and can generate,
+  modify, and manage code.
+
+- 🌐 **In-Browser Code Execution**
+  WebContainers provide a browser-based Node.js runtime.
+
+- 💻 **Interactive Terminal**
+  Execute commands and view real-time process output.
+
+- 🗂️ **Integrated IDE**
+  File explorer, code editor, terminal, AI assistant, and preview
+  are combined into one workspace.
+
+- 🔐 **Secure Authentication**
+  JWT-based authentication with project and workspace management.
+
+## 🏗️ Architecture
+
+```text
+                    ┌──────────────────────┐
+                    │      React Client    │
+                    │   Collaborative IDE  │
+                    └──────────┬───────────┘
+                               │
+              ┌────────────────┼────────────────┐
+              │                │                │
+              ▼                ▼                ▼
+        Socket.io          REST APIs       WebContainers
+        Real-time          Node/Express     Browser Runtime
+        Collaboration          │
+                               ▼
+                         ┌─────────────┐
+                         │  MongoDB    │
+                         └─────────────┘
+
+                               │
+                               ▼
+                         ┌─────────────┐
+                         │ Groq /      │
+                         │ Llama 3     │
+                         └─────────────┘
 ## 🛠️ Technology Stack
 
-- **Frontend**: React (Vite), Tailwind CSS, Socket.io Client, WebContainer API, Xterm.js, Highlight.js
-- **Backend**: Node.js, Express.js, Socket.io, MongoDB, Mongoose
-- **AI Integration**: Groq SDK (Llama-3.3-70b-versatile)
-- **Security**: JSON Web Tokens (JWT), bcrypt
+| Layer | Technologies |
+|---|---|
+| Frontend | React, Vite, Tailwind CSS |
+| Real-Time | Socket.io |
+| Backend | Node.js, Express.js |
+| Database | MongoDB, Mongoose |
+| AI | Groq SDK, Llama 3 |
+| Runtime | WebContainers |
+| Terminal | xterm.js |
+| Authentication | JWT, bcrypt |
 
 ## 🚀 Getting Started
 
