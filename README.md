@@ -12,6 +12,10 @@
 
 ![CollabCode Landing Page](./Screenshots/landing-page.png)
 
+### Project Dashboard
+
+![CollabCode Dashboard](./Screenshots/dashboard.png)
+
 ### Collaborative IDE
 
 ![CollabCode IDE](./Screenshots/ai-code-editor.png)
@@ -19,10 +23,6 @@
 ### Real-Time Collaboration
 
 ![CollabCode Collaboration](./Screenshots/collaboration.png)
-
-### Project Dashboard
-
-![CollabCode Dashboard](./Screenshots/dashboard.png)
 
 # 💡 What I Built
 
@@ -32,7 +32,6 @@ collaborative development into one browser-based environment.
 The project combines real-time communication, AI-assisted development,
 browser-based code execution, terminal access, and workspace management
 into a single platform.
-
 
 ## 💡 Why CollabCode?
 
@@ -82,13 +81,14 @@ collaboration tools, developers can work within one browser-based workspace.
                          ┌─────────────┐
                          │  MongoDB    │
                          └─────────────┘
-
                                │
                                ▼
                          ┌─────────────┐
                          │ Groq /      │
                          │ Llama 3     │
                          └─────────────┘
+```
+
 ## 🛠️ Technology Stack
 
 | Layer | Technologies |
@@ -104,46 +104,25 @@ collaboration tools, developers can work within one browser-based workspace.
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Node.js (v18+)
-- MongoDB connection string
-- Groq API Key
+**Prerequisites:** Node.js (v18+)
 
-### 1. Clone the repository
 ```bash
+# 1. Clone the repository
 git clone https://github.com/Anjal08/CollabCode.git
 cd CollabCode
-```
 
-### 2. Backend Setup
-```bash
-cd backend
-npm install
-```
-Create a `.env` file in the `backend` directory:
-```env
-PORT=3000
-MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-GROQ_API_KEY=your_groq_api_key
-```
-Start the backend server:
-```bash
-npm start
-```
+# 2. Install dependencies for both frontend and backend
+cd backend && npm install
+cd ../frontend && npm install
 
-### 3. Frontend Setup
-```bash
-cd frontend
-npm install
-```
-Create a `.env` file in the `frontend` directory:
-```env
-VITE_API_URL=http://localhost:3000
-```
-Start the frontend server:
-```bash
-npm run dev
+# 3. Create .env files (see Environment Variables section below)
+
+# 4. Start the development servers
+# Open two terminals:
+# Terminal 1:
+cd backend && npm start
+# Terminal 2:
+cd frontend && npm run dev
 ```
 
 ## 💡 Usage Guide
@@ -152,6 +131,23 @@ npm run dev
 2. **Invite the Team**: Add other registered developers as collaborators to your project.
 3. **Summon the AI**: Open the chat panel and type `@ai create an express server on port 3000`. Watch as the file tree automatically populates!
 4. **Run Code**: Open the Terminal tab, type `npm install` and then `node index.js`. Your code is now running in the browser sandbox.
+
+## ⚙️ Environment Variables
+
+Create `.env` files in both the frontend and backend directories based on these templates:
+
+### Backend (`/backend/.env`)
+```env
+PORT=3000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_super_secret_jwt_key
+GROQ_API_KEY=your_groq_api_key_for_ai
+```
+
+### Frontend (`/frontend/.env`)
+```env
+VITE_API_URL=http://localhost:3000
+```
 
 ## 📄 License
 This project is licensed under the MIT License.
